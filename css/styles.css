@@ -679,6 +679,19 @@ body {
     background-color: var(--accent-color);
 }
 
+.under-form {
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    display: flex;
+}
+
 /*================ MODAL WINDOW =================== */
 
 .backdrop {
