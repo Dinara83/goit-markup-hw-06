@@ -36,7 +36,21 @@ body {
     padding-bottom: 94px;
 }
 
-/* Навигация */
+.visually-hidden,
+.button-hidden,
+.project-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ================== НАВИГАЦИЯ ======================== */
 
 .page-header {
     border: 1px solid var(--line-header);
@@ -154,6 +168,7 @@ body {
     fill: var(--accent-color);
 }
 
+/* ===================== ШАПКА САЙТА =================== */
 .hero {
     flex-wrap: wrap;
     align-items: center;
@@ -210,29 +225,14 @@ body {
     background-color: #188ce8;
 }
 
-/* Особенности */
-/* Деятельность */
-/* Команда */
-
-.visually-hidden,
-.button-hidden,
-.project-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
+/* ================== ОСОБЕННОСТИ ======================= */
 
 .visually-list {
     display: flex;
     align-content: center;
     justify-content: center;
 }
+
 .visually-list > .visually-item:not(:last-child) {
     margin-right: 30px;
 }
@@ -274,11 +274,12 @@ body {
     margin-bottom: 0px;
 }
 
+/* ================== ДЕЯТЕЛЬНОСТЬ ====================== */
+
 .activity {
     padding-top: 0px;
 }
-.activity-item,
-.proficional-item {
+.activity-item {
     display: flex;
 }
 
@@ -299,10 +300,6 @@ body {
 }
 
 .activity-item > .activ:not(:last-child) {
-    margin-right: 30px;
-}
-
-.proficional-item > .prof:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -335,10 +332,25 @@ body {
     height: auto;
 }
 
+/* ================== КОМАНДА ==================== */
+
 .proficional {
     background-color: var(--primary-light-grey-color);
     padding-top: 94px;
 }
+
+.prof-title {
+    padding: 30px 30px;
+}
+
+.proficional-item {
+    display: flex;
+}
+
+.proficional-item > .prof:not(:last-child) {
+    margin-right: 30px;
+}
+
 .prof {
     width: 270px;
     margin: 0 auto;
@@ -346,10 +358,6 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
-
-.prof-title {
-    padding: 30px 30px;
 }
 
 .proficional-team {
@@ -408,13 +416,53 @@ body {
 .social-link:focus .social-icon {
     fill: var(--primary-white-color);
 }
-/* Портфолио */
+
+/* ======================= КЛИЕНТЫ  =======================*/
+
+.clients-title {
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--basic-color);
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clients-list-item {
+    cursor: pointer;
+}
+
+.clients-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    transition: fill var(--transition-dur-and-funk), border var(--transition-dur-and-funk);
+}
+
+.clients-link:hover {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+/* ===================== ПОРТФОЛИО ===================== */
 
 .portfolio {
     background-color: var(--primary-white-color);
 }
 
-/* Фильтры */
+/* --------------------- Фильтры ------------------- */
 
 .filter-button {
     display: flex;
@@ -462,7 +510,7 @@ body {
         0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Проект */
+/* -------------- Проект --------------------- */
 
 .project-list {
     display: flex;
@@ -535,46 +583,8 @@ body {
     margin-top: 4px;
     margin-bottom: 0;
 }
-/* Клиенты */
 
-.clients-title {
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--basic-color);
-    margin-bottom: 50px;
-}
-
-.clients-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.clients-list-item {
-    cursor: pointer;
-}
-
-.clients-link {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    fill: #afb1b8;
-    transition: fill var(--transition-dur-and-funk), border var(--transition-dur-and-funk);
-}
-
-.clients-link:hover {
-    fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
-/* Футер */
+/* =================== ФУТЕР ===========================*/
 
 .under {
     padding-top: 60px;
@@ -669,7 +679,7 @@ body {
     background-color: var(--accent-color);
 }
 
-/*====== Modal window ======*/
+/*================ MODAL WINDOW =================== */
 
 .backdrop {
     position: fixed;
