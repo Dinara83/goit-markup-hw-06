@@ -617,6 +617,7 @@ body {
 .under-address-social {
     display: flex;
     align-items: baseline;
+    /* justify-content: center; */
 }
 
 .address {
@@ -640,6 +641,9 @@ body {
 }
 
 .foot-social-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
     margin-bottom: 20px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -680,37 +684,45 @@ body {
 }
 
 .contact-form {
+    align-content: stretch;
     margin-left: 93px;
+    /* margin-right: 215px; */
     display: block;
+}
+
+.messege-form {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    font-style: normal;
     color: var(--primary-white-color);
-    /* color: var(--primary-white-color);
-    font-weight: 700;
-    
-    letter-spacing: 0.03em;
-    text-transform: uppercase; */
 }
 
 .contact-form-under {
-    width: 100%;
-    min-height: 50px;
-
-    /* flex-direction: column; */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 0px 4px 4px rgba 0, 0, 0, 0.15;
-    border-radius: 4px;
-    resize: none;
+    display: flex;
+    justify-items: center;
 }
 
-.contact-form-under:focus {
+.contact-form-input {
+    min-height: 50px;
+    margin-right: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--primary-theme-dark);
+}
+.contact-form-input:focus {
+}
+.form-email input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .contact-form-btn {
 }
+
+resize: none;
 /*================ MODAL WINDOW =================== */
 
 .backdrop {
